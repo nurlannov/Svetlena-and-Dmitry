@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover" />
+  <title>Приглашение на свадьбу - Алтынбек & Үмүтай (23.09.2025)</title>
+
+  <meta property="og:title" content="Приглашение на свадьбу - Алтынбек & Үмүтай (23.09.2025)">
+  <meta property="og:description" content="Жених и Невеста приглашают вас на свадьбу. Ваше приглашение:">
+  <meta property="og:type" content="website">
+
+  <!-- тот же набор шрифтов -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Bad+Script|Comfortaa|Kurale|Zen+Antique+Soft|Montserrat:900,800,600,500,300|Lobster|Lora:400i|Marck+Script|Marmelad|Merriweather|Neucha|Open+Sans+Condensed:300|Open+Sans:400,400i|PT+Sans+Narrow:400,700|Philosopher:400,400i|Play|Roboto+Condensed|Roboto+Slab|Roboto:100|Ubuntu:400,400i|Yeseva+One&subset=cyrillic">
+
+  <style>
+    :root{
+      --bg:#0f0f10;
+      --white:#f5f5f5;
+      --muted:rgba(255,255,255,.86);
+      --muted2:rgba(255,255,255,.75);
+      --teal:#62b0ad;
+      --tealBorder:#2fd3cf;
+      --panelW: 360px;
+      --pad: 22px;
+
+      /* ====== УЗОРЫ (выбирай) ======
+         Меняются через data-pattern на <body> (см. низ)
+      */
+
+      /* Узор 1 — волны (похож на твой скрин, контрастнее) */
+      --pattern1: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.14' stroke-width='7'%3E%3Cpath d='M-30 60 C 20 10, 80 10, 130 60 S 240 110, 290 60'/%3E%3Cpath d='M-30 140 C 20 90, 80 90, 130 140 S 240 190, 290 140'/%3E%3Cpath d='M-30 220 C 20 170, 80 170, 130 220 S 240 270, 290 220'/%3E%3Cpath d='M-30 -20 C 20 -70, 80 -70, 130 -20 S 240 30, 290 -20'/%3E%3C/g%3E%3C/svg%3E");
+
+      /* Узор 2 — “арабески/петли” */
+      --pattern2: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.12' stroke-width='6'%3E%3Cpath d='M40 130c0-50 40-90 90-90s90 40 90 90-40 90-90 90-90-40-90-90Z'/%3E%3Cpath d='M85 130c0-25 20-45 45-45s45 20 45 45-20 45-45 45-45-20-45-45Z'/%3E%3Cpath d='M130 40c50 0 90 40 90 90'/%3E%3Cpath d='M130 220c-50 0-90-40-90-90'/%3E%3C/g%3E%3C/svg%3E");
+
+      /* Узор 3 — “ромбы/геометрия” */
+      --pattern3: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.11' stroke-width='4'%3E%3Cpath d='M110 10 210 110 110 210 10 110Z'/%3E%3Cpath d='M110 50 170 110 110 170 50 110Z'/%3E%3Cpath d='M110 90 130 110 110 130 90 110Z'/%3E%3C/g%3E%3C/svg%3E");
+
+      /* Узор 4 — “цветочный/розетка” */
+      --pattern4: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.11' stroke-width='5'%3E%3Cpath d='M120 30c25 0 45 20 45 45s-20 45-45 45-45-20-45-45 20-45 45-45Z'/%3E%3Cpath d='M120 120c25 0 45 20 45 45s-20 45-45 45-45-20-45-45 20-45 45-45Z'/%3E%3Cpath d='M30 120c0-25 20-45 45-45s45 20 45 45-20 45-45 45-45-20-45-45Z'/%3E%3Cpath d='M210 120c0-25-20-45-45-45s-45 20-45 45 20 45 45 45 45-20 45-45Z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:auto; }
+
+    /* ✅ FIX: страница теперь нормально скроллится мышкой */
+    body{
+      margin:0;
+      font-family: "Open Sans", Arial, sans-serif;
+      background:#000;
+      color:var(--white);
+
+      display:flex;
+      justify-content:center;
+      align-items:flex-start; /* важно: не растягиваем “телефон” по высоте */
+      min-height:100vh;
+
+      overflow-y:auto;
+    }
+
+    .phone{
+      width:min(var(--panelW), 100vw);
+      background: var(--bg);
+      min-height:100vh;
+      position:relative;
+
+      /* ✅ FIX: не режем вертикальную прокрутку */
+      overflow-x:hidden;
+
+      box-shadow: 0 20px 80px rgba(0,0,0,.5);
+    }
+
+    /* Узор с выбором */
+    .pattern{
+      position:absolute; inset:0;
+      background-color: var(--bg);
+
+      /* дефолт */
+      background-image: var(--pattern1);
+      background-repeat: repeat;
+      background-size: 220px 220px;
+
+      /* чтобы узор был виднее и не “плоско” */
+      opacity: 1;
+      mix-blend-mode: screen;
+      pointer-events:none;
+    }
+
+    /* выбираем узор через data-pattern на body */
+    body[data-pattern="1"] .pattern{ background-image: var(--pattern1); background-size:220px 220px; }
+    body[data-pattern="2"] .pattern{ background-image: var(--pattern2); background-size:260px 260px; }
+    body[data-pattern="3"] .pattern{ background-image: var(--pattern3); background-size:220px 220px; }
+    body[data-pattern="4"] .pattern{ background-image: var(--pattern4); background-size:240px 240px; }
+
+    /* лёгкий градиент поверх, чтобы было как “дорого” */
+    .phone::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(70% 45% at 50% 10%, rgba(255,255,255,.10), rgba(0,0,0,0) 70%),
+        radial-gradient(80% 60% at 50% 100%, rgba(0,0,0,.55), rgba(0,0,0,0) 60%);
+      pointer-events:none;
+      z-index:1;
+    }
+
+    .section{
+      position:relative;
+      z-index:2;
+      padding: 0 var(--pad);
+    }
+
+    /* -------- COVER -------- */
+    .cover{
+      height: 92vh;
+      min-height: 780px;
+      padding: 0;
+      position:relative;
+      overflow:hidden;
+      z-index:2;
+    }
+    .cover::after{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(80% 60% at 50% 0%, rgba(255,255,255,.15), rgba(0,0,0,0) 55%);
+      pointer-events:none;
+      z-index:3;
+    }
+
+    .monogram{
+      text-align:center;
+      padding-top: 90px;
+      position:relative;
+      z-index:4;
+    }
+    .monogram .big{
+      font-family: "Merriweather", serif;
+      font-weight: 400;
+      font-size: 92px;
+      letter-spacing: .02em;
+    }
+    .monogram .names{
+      margin-top: 10px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      letter-spacing: .20em;
+      text-transform: uppercase;
+      display:flex;
+      gap: 12px;
+      justify-content:center;
+      align-items:baseline;
+      opacity: .95;
+    }
+    .monogram .and{
+      font-family: "Marck Script", cursive;
+      font-size: 22px;
+      letter-spacing: .02em;
+      text-transform:none;
+      opacity:.9;
+    }
+
+    .coverPhoto{
+      position:absolute;
+      left: 0; right: 0;
+      bottom: -20px;
+      height: 55%;
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&q=70");
+      background-size: cover;
+      background-position: 50% 35%;
+      filter: grayscale(1) contrast(1.1);
+      z-index:2;
+    }
+
+    /* -------- GREETING -------- */
+    .greeting{
+      padding-top: 70px;
+      padding-bottom: 56px;
+    }
+    .titleSerif{
+      font-family: "Yeseva One", serif;
+      font-weight: 400;
+      font-size: 44px;
+      text-align:center;
+      margin: 0 0 18px;
+    }
+    .textCenter{
+      text-align:center;
+      font-size: 18px;
+      line-height: 1.35;
+      color: var(--muted);
+      margin: 0 auto;
+      max-width: 290px;
+    }
+    .placeLine{
+      margin-top: 26px;
+      text-align:center;
+      font-size: 18px;
+      color: var(--white);
+      opacity:.95;
+    }
+    .framePhoto{
+      width: 250px;
+      margin: 26px auto 10px;
+      border: 2px solid rgba(255,255,255,.75);
+      padding: 10px;
+      background: rgba(255,255,255,.06);
+    }
+    .framePhoto img{
+      width: 100%;
+      display:block;
+      filter: grayscale(1) contrast(1.1);
+    }
+    .quote{
+      text-align:center;
+      margin-top: 12px;
+      font-family: "Marck Script", cursive;
+      font-size: 32px;
+      line-height: 1.2;
+      color: rgba(255,255,255,.92);
+      text-shadow: 0 6px 18px rgba(0,0,0,.55);
+    }
+
+    /* -------- BRIDE/GROOM -------- */
+    .people{
+      padding-top: 20px;
+      padding-bottom: 32px;
+    }
+    .person{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .avatar{
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,.85);
+      overflow:hidden;
+      background:#222;
+      box-shadow: 0 20px 60px rgba(0,0,0,.45);
+    }
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      filter: grayscale(1) contrast(1.1);
+      display:block;
+    }
+    .roleName{
+      font-family: "Marck Script", cursive;
+      font-size: 44px;
+      margin: 0;
+      line-height: 1;
+    }
+
+    /* -------- MENU -------- */
+    .menu{
+      padding-top: 10px;
+      padding-bottom: 26px;
+    }
+    .capsTitle{
+      font-family: "Yeseva One", serif;
+      font-size: 24px;
+      letter-spacing: .10em;
+      text-align:center;
+      margin: 18px 0 10px;
+    }
+    .menuText{
+      text-align:center;
+      font-size: 18px;
+      line-height: 1.35;
+      color: var(--muted2);
+      margin: 0 auto;
+      max-width: 305px;
+    }
+    .btnOutline{
+      margin: 22px auto 6px;
+      width: 90%;
+      max-width: 320px;
+      border: 2px solid var(--tealBorder);
+      background: rgba(0,0,0,.15);
+      color: var(--white);
+      padding: 14px 12px;
+      text-align:center;
+      font-family: "Yeseva One", serif;
+      letter-spacing: .06em;
+      font-size: 20px;
+      cursor:pointer;
+    }
+
+    /* -------- GIFTS / NOTE / CONFIRM -------- */
+    .gifts{
+      padding-top: 10px;
+      padding-bottom: 44px;
+    }
+    .blockText{
+      text-align:center;
+      font-size: 18px;
+      line-height: 1.35;
+      color: var(--muted2);
+      margin: 0 auto;
+      max-width: 320px;
+    }
+    .noteTitle{
+      font-family: "Yeseva One", serif;
+      font-size: 26px;
+      letter-spacing: .08em;
+      text-align:center;
+      margin: 20px 0 12px;
+    }
+    .noteBox{
+      margin: 0 auto;
+      max-width: 330px;
+      border: 2px solid var(--tealBorder);
+      padding: 14px 12px;
+      text-align:center;
+      font-size: 18px;
+      line-height: 1.35;
+      color: var(--white);
+      background: rgba(0,0,0,.10);
+    }
+
+    /* -------- PHOTO HASHTAG -------- */
+    .hash{
+      padding-top: 52px;
+      padding-bottom: 46px;
+    }
+    .hashSmall{
+      text-align:center;
+      font-size: 18px;
+      line-height: 1.35;
+      color: var(--muted2);
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .hashtag{
+      text-align:center;
+      margin-top: 18px;
+      font-family: "Marck Script", cursive;
+      font-size: 54px;
+      letter-spacing: .02em;
+    }
+    .palette{
+      display:flex;
+      justify-content:center;
+      gap: 14px;
+      margin-top: 26px;
+      opacity:.22;
+    }
+    .dot{
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.6);
+      background: rgba(255,255,255,.10);
+    }
+
+    /* -------- SCHEDULE -------- */
+    .scheduleWrap{
+      background: #9a9a9a;
+      padding: 44px 0 60px;
+      position:relative;
+      z-index:2;
+    }
+    .scheduleTitle{
+      font-family: "Marck Script", cursive;
+      font-size: 44px;
+      text-align:center;
+      color: rgba(255,255,255,.92);
+      margin: 0 0 22px;
+    }
+    .scheduleCard{
+      width: 92%;
+      max-width: 330px;
+      margin: 0 auto;
+      border: 2px solid rgba(255,255,255,.7);
+      background: var(--teal);
+      padding: 18px 14px;
+      color: #fff;
+    }
+    .event{
+      display:grid;
+      grid-template-columns: 88px 1fr;
+      gap: 14px;
+      padding: 10px 0;
+    }
+    .event + .event{
+      border-top: 2px solid rgba(255,255,255,.25);
+      margin-top: 10px;
+      padding-top: 16px;
+    }
+    .timeCol{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    .dateCol{
+      display:block;
+      margin-top: 6px;
+      font-weight: 600;
+      opacity:.95;
+    }
+    .eventTitle{
+      font-family: "Yeseva One", serif;
+      font-size: 22px;
+      margin: 0;
+      line-height: 1.15;
+    }
+    .eventPlace{
+      margin-top: 6px;
+      font-weight: 700;
+      opacity:.95;
+    }
+    .eventText{
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 1.35;
+      opacity:.98;
+    }
+
+    .anchor{ position:relative; top:-18px; }
+    .spacer{ height: 22px; }
+  </style>
+</head>
+
+<!-- ✅ Тут меняй узор: 1 / 2 / 3 / 4 -->
+<body data-pattern="3">
+  <div class="phone">
+    <div class="pattern" aria-hidden="true"></div>
+
+    <section class="cover" id="cover">
+      <div class="monogram">
+        <div class="big">S &amp; D</div>
+        <div class="names">
+          <span>Светлана</span>
+          <span class="and">and</span>
+          <span>Дмитрий</span>
+        </div>
+      </div>
+      <div class="coverPhoto" aria-hidden="true"></div>
+    </section>
+
+    <div class="anchor" id="greeting"></div>
+    <section class="section greeting">
+      <h2 class="titleSerif">Дорогой<br>Гость!</h2>
+
+      <p class="textCenter">
+        Мы рады сообщить Вам, что<br>
+        <b>23.09.2025</b> состоится самое<br>
+        главное торжество в нашей<br>
+        жизни — день нашей свадьбы!<br>
+        Приглашаем Вас разделить с<br>
+        нами радость этого<br>
+        незабываемого дня.
+      </p>
+
+      <div class="placeLine">город:Чолпон-Ата<br>ресторан:Боз-уй</div>
+
+      <div class="framePhoto">
+        <img alt="Фото пары"
+             src="https://images.unsplash.com/photo-1523437237164-d442d57cc3c9?auto=format&fit=crop&w=900&q=70">
+      </div>
+
+      <div class="quote">
+        Там, где вместе<br>
+        любовь, растёт<br>
+        радость
+      </div>
+    </section>
+
+    <div class="anchor" id="people"></div>
+    <section class="section people">
+      <div class="person">
+        <div class="avatar">
+          <img alt="Жених"
+               src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=70">
+        </div>
+        <p class="roleName">Жених</p>
+      </div>
+
+      <div class="person" style="margin-top:18px;">
+        <div class="avatar">
+          <img alt="Невеста"
+               src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=70">
+        </div>
+        <p class="roleName">Невеста</p>
+      </div>
+    </section>
+
+    <div class="anchor" id="menu"></div>
+    <section class="section menu">
+      <div class="capsTitle">МЕНЮ</div>
+      <p class="menuText">
+        Меню разнообразно, поэтому сообщите нам заранее,
+        если у вас есть какие-либо предпочтения или
+        диетические ограничения. После подтверждения
+        вы сможете пройти опрос о своих вкусовых
+        предпочтениях и напитках.
+      </p>
+
+      <button class="btnOutline" type="button" onclick="document.getElementById('gifts').scrollIntoView({behavior:'smooth'})">
+        ПОЖЕЛАНИЯ ПО<br>ПОДАРКАМ
+      </button>
+
+      <div class="blockText" style="margin-top:10px;">
+        Ваше присутствие в день нашей свадьбы - самый значимый подарок для нас!
+      </div>
+    </section>
+
+    <div class="anchor" id="gifts"></div>
+    <section class="section gifts">
+      <div class="capsTitle">ПОЖЕЛАНИЯ ПО<br>ПОДАРКАМ</div>
+
+      <p class="blockText" style="margin-top:10px;">
+        Ваше присутствие в день нашей свадьбы - самый значимый подарок для нас!
+        <br><br>
+        Мы понимаем, что дарить цветы на свадьбу - это традиция,
+        но мы не сможем насладиться их красотой в полной мере...
+        Будем рады любой другой альтернативе (вино или в денежном эквиваленте).
+      </p>
+
+      <div class="noteTitle">ПРИМЕЧАНИЕ</div>
+
+      <div class="noteBox">
+        Будем благодарны, если вы воздержитесь от криков "горько" на празднике,
+        ведь поцелуй — это знак выражения чувств, он не может быть по заказу.
+      </div>
+
+      <div class="capsTitle" style="margin-top:18px;">ПОДТВЕРЖДЕНИЕ</div>
+      <p class="blockText">
+        Пожалуйста подтвердите свое<br>
+        присутствие до <b>01.01.2025</b>
+      </p>
+    </section>
+
+    <div class="anchor" id="photo"></div>
+    <section class="section hash">
+      <div class="capsTitle">ФОТО</div>
+      <p class="hashSmall">
+        Опубликуйте фото дня нашей<br>
+        свадьбы в соц.сетях с хештегом<br>
+        #
+      </p>
+    </section>
+
+    <div class="anchor" id="schedule"></div>
+    <section class="scheduleWrap">
+      <div class="scheduleTitle">Свадебное расписание</div>
+
+      <div class="scheduleCard">
+        <div class="event">
+          <div class="timeCol">
+            10:00
+            <span class="dateCol">23.09.2025</span>
+          </div>
+          <div>
+            <p class="eventTitle">Торжественная<br>роспись</p>
+            <div class="eventPlace">ЗАГС</div>
+            <div class="eventText">
+              Приглашаем вас разделить вместе с нами
+              радость создания новой семьи.
+            </div>
+          </div>
+        </div>
+
+        <div class="event">
+          <div class="timeCol">
+            10:00
+            <span class="dateCol">23.09.2025</span>
+          </div>
+          <div>
+            <p class="eventTitle">Фуршет</p>
+            <div class="eventPlace">Банкетный зал</div>
+            <div class="eventText">
+              После росписи вас доставят до банкетного зала 2 микроавт.
+              Именно здесь мы отметим наш незабываемый день.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="spacer"></div>
+  </div>
+</body>
+</html>
